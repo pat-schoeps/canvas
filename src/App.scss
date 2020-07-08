@@ -1,0 +1,120 @@
+$darkGray:    #202A51;
+$medGray:   #616680;
+$lightGray:   #f5f6f8;
+$offGray:   #9499AC;
+$black:     #000000;
+
+body {
+  background: $lightGray;
+}
+
+.Workspace {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .inner-container {
+    background: white;
+    border-radius: 15px;
+    height: 80vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    overflow: hidden;
+  }
+}
+
+.History {
+  width: 90%;
+  min-height: 4rem;
+  background: white;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.Controls .Field {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  input, label {
+    font-size: .85rem;
+  }
+
+  input {
+    border: none;
+    appearance: none;
+    border-bottom: 1px solid $medGray;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    transition: all 200ms;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    margin-bottom: .25rem;
+  }
+}
+
+.Board {
+  position: relative;
+}
+
+.Board .Background {
+  height: 100%;
+  width: 100%;
+}
+
+.Board .Right {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 5px;
+  position: absolute;
+  right: 4rem;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 500;
+}
+
+.Board .Bottom {
+  height: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.Board .Left {
+  height: 100%;
+  left: 0rem;
+  top: 0;
+  width: 15rem;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.Board .Middle {
+  height: 25%;
+  bottom: 5rem;
+  width: 25rem;
+  left: 20rem;
+  position: absolute;
+  border-radius: 5px;
+}
+
+
+
+
+
